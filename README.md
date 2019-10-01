@@ -10,3 +10,10 @@ A BetterDiscord CustomCSS UI/UX upgrade created by touchportal.
 1. Regular Discord UI in other areas
 
 ---
+
+# How to install:
+1. Install [BandagedBetterDiscord](https://github.com/rauenzi/BetterDiscordApp/releases)
+1. Go to discord's settings
+1. Copy and paste touchportal's Discord.css from the `master` branch into the Custom CSS settings tab
+
+---
