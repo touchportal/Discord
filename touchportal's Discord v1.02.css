@@ -53,10 +53,38 @@ body > div:last-of-type {
 
 
 .app-2rEoOp,
-.layer-3QrUeG,
-.systemPad-3UxEGl {
+.bg-h5JY_x,
+.layer-3QrUeG {
     background-color: transparent !important;
-} /* Transparency */
+} /* App Transparency */
+
+
+.app-2rEoOp .contextMenu-HLZMGh {
+    display: none;
+} /* Fix right click */
+
+
+.item-1Yvehc > span {
+    font-weight: 500;
+    box-sizing: border-box;
+    margin: 2px 0;
+    padding: 0 8px;
+    font-size: 14px;
+    line-height: 18px;
+    min-height: 32px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 2px;
+    color: var(--interactive-normal);
+    outline: 0;
+} /* Fix "Copy Selector" option [1/2] */
+
+.item-1Yvehc:hover > span {
+    cursor: pointer;
+    color: var(--interactive-hover);
+    background-color: var(--background-tertiary);
+} /* Fix "Copy Selector" option [2/2] */
 
 
 .titleBar-AC4pGV {
@@ -76,7 +104,9 @@ body > div:last-of-type {
 
 
 
-.guilds-1SWlCJ {
+.guilds-1SWlCJ,
+.guilds-1SWlCJ .systemPad-3UxEGl,
+.container-PNkimc {
     background-color: transparent !important;
 } /* Transparency */
 
@@ -109,7 +139,7 @@ body > div:last-of-type {
 
 .sidebar-2K8pFh,
 .privateChannels-1nO12o,
-.container-PNkimc {
+.privateChannels-1nO12o .systemPad-3UxEGl {
     background-color: transparent !important;
 } /* Transparency */
 
@@ -207,7 +237,13 @@ body > div:last-of-type {
 
 
 
-.title-3qD0b-, .content-yTz4x3, .chat-3bRxxu, .chat-3bRxxu form, .messagesWrapper-3lZDfY, .typing-2GQL18 {
+.title-3qD0b-,
+.content-yTz4x3,
+.chatContent-a9vAAp .systemPad-3UxEGl,
+.chat-3bRxxu,
+.chat-3bRxxu form,
+.messagesWrapper-3lZDfY,
+.typing-2GQL18 {
     background-color: transparent !important;
 } /* Transparency */
 
@@ -314,6 +350,11 @@ body > div:last-of-type {
 } /* Timestamp animation [3/3] */
 
 
+.container-1YxwTf .buttonContainer-KtQ8wc {
+    margin-right: 12px;
+} /* Tweaked the more actions button */
+
+
 .children-19S4PO::after {
     opacity: 0;
 } /* Remove random bit */
@@ -352,41 +393,45 @@ body > div:last-of-type {
 } /* Remove text input if disabled [2/2] */
 
 
-.channelTextArea-1LDbYG, .channelTextArea-rNsIhG {
+.channelTextArea-1LDbYG,
+.channelTextArea-rNsIhG {
     background: transparent !important;
     padding-top: 0;
     margin-top: 15px;
     border-top: none;
     border-radius: 100px;
-} /* Reworked text input [1/3] */
+} /* Reworked text input [1/5] */
 
 .inner-zqa7da {
     background: var(--default-background) fixed !important;
     padding-left: 2px;
     border-radius: 25px;
     box-shadow: 0 0 10px #111111;
-    opacity: 0.8;
-    transition: 0.3s;
-} /* Tweaked text input overlay [2/3] */
-
-.inner-zqa7da:hover {
-    opacity: 1;
-} /* Brighten text input on hover [3/3] */
-
+} /* Tweaked text input overlay [2/5] */
 
 .buttons-205you button[aria-label="Send a gift"] {
     display: none;
-} /* Remove Nitro Gift button [1/3] */
+} /* Remove Nitro Gift button [3/5] */
 
 .inner-zqa7da textarea {
     margin: 5px 2px 2px 0;
-} /* Fix placeholder text position [3/3] */
+} /* Fix placeholder text position [4/5] */
 
 .inner-zqa7da .flex-1xMQg5 button[aria-label="Upload a File"],
 .inner-zqa7da .buttons-205you .buttonContainer-21MN7J button[aria-label="Open GIF picker"],
 .inner-zqa7da .buttons-205you button[aria-label="Select emoji"] {
     height: 50px;
-} /* Tweak existing buttons [3/3] */
+} /* Tweak existing buttons [5/5] */
+
+
+.container-3ISnnM {
+    background: var(--default-background) fixed !important;
+} /* Tweak GIF window [1/2] */
+
+.container-3ISnnM .header-1TOWci,
+.container-3ISnnM .content-ySCtCx {
+    background: transparent !important;
+} /* GIF background transparency [2/2] */
 
 
 .searchBar-3dMhjb {
@@ -421,13 +466,6 @@ body > div:last-of-type {
 } /* Show search text when opened [6/6] */
 
 
-.container-3cGP6G {
-    background: var(--default-background) fixed !important;
-    border: 2px solid #ffe066;
-    border-radius: 7px;
-} /* Tweaked "More Text Options" window */
-
-
 .container-1YxwTf .inner-zqa7da {
     border-radius: 7px;
 } /* Message edit box */
@@ -441,34 +479,37 @@ body > div:last-of-type {
 .members-1998pB,
 .members-1998pB .layout-2DM8Md {
     background-color: transparent !important;
+    margin-left: 5px;
 } /* Transparency */
 
 
+.members-1998pB,
 .membersWrap-2h-GB4 {
     width: 100px !important;
     min-width: unset !important;
     transition: 0.7s;
 } /* Makes the list smaller [1/10] */
 
+.membersWrap-2h-GB4:hover .members-1998pB,
 .membersWrap-2h-GB4:hover {
-    width: 232px !important;
+    width: 220px !important;
 } /* Enlarges the list on hover [2/10] */
 
 .membersGroup-v9BXpm {
-    width: 110px;
+    width: 90px;
     height: auto;
     white-space: normal;
     text-align: center;
     transition: 0.6s;
-    transform: scale(.7) translateX(-20%) perspective(1px);
+    transform: scale(.7) translateX(-20%);
     box-sizing: content-box;
     line-height: 20px;
-    margin: 3% 5%;
+    margin: 5%;
     padding: 1% 0;
 } /* Resizes role names to fit the smaller list [3/10] */
 
 .membersWrap-2h-GB4:hover .membersGroup-v9BXpm {
-    transform: scale(1);
+    transform: scale(1) translateX(-10%);
     width: 220px;
     padding: 1% 0;
 } /* Resets the size on hover [4/10] */
@@ -508,7 +549,8 @@ body > div:last-of-type {
 
 
 
-.activityFeed-1C0EmJ, .container-1r6BKw {
+.activityFeed-1C0EmJ,
+.container-1r6BKw {
     background-color: transparent !important;
 } /* Transparency */
 
@@ -520,7 +562,8 @@ body > div:last-of-type {
 
 .root-1BQpZw,
 .gameLibrary-TTDw4Y,
-.stickyHeader-r2k9DK {
+.stickyHeader-r2k9DK,
+.gameLibrary-TTDw4Y .systemPad-3UxEGl {
     background-color: transparent !important;
 } /* Transparency */
 
@@ -583,7 +626,8 @@ body > div:last-of-type {
 
 
 
-.applicationStore-1pNvnv {
+.applicationStore-1pNvnv,
+.applicationStore-1pNvnv .systemPad-3UxEGl {
     background-color: transparent !important;
 } /* Transparency */
 
@@ -621,44 +665,59 @@ body > div:last-of-type {
 
 
 
-.container-3gCOGc {
+.container-3gCOGc,
+.friendsTable-133bsv .systemPad-3UxEGl,
+.body-3iLsc4 .systemPad-3UxEGl {
     background-color: transparent !important;
 } /* Transparency */
 
+
+.popouts-2bnG9Z .popout-2iWAc- {
+    border-radius: 20px;
+} /* Tweaked all popups [1/9] */
 
 .userPopout-3XzG_A {
     background: var(--default-background) fixed !important;
     border-radius: 20px;
     width: 250px;
-} /* Reworked "Profile" popup window [1/6] */
+} /* Reworked "Profile" popup window [2/9] */
 
 .headerNormal-T_seeN,
 .headerPlaying-j0WQBV {
     background: var(--default-background) fixed !important;
-} /* Fix for header background [2/6] */
+} /* Fix for header background [3/9] */
 
 .headerTop-3C2Zn0 {
     background: var(--profile-background) center/cover repeat;
     border: 3px outset #ffe066;
     width: 224px;
     border-radius: 20px;
-} /* Reworked header [3/6] */
+} /* Reworked header [4/9] */
 
 .activityUserPopout-2yItg2 {
     background: transparent !important;
-} /* Reworked activity tab [4/6] */
+} /* Reworked activity tab [5/9] */
 
 .body-3iLsc4 {
     background: transparent !important;
-    border: 3px groove #ffe066;
-    border-width: 0 0 3px 0;
-    border-style: groove;
-    border-radius: 0 0 20px 20px;
-} /* Reworked body [5/6] */
+} /* Reworked body [6/9] */
 
 .footer-1fjuF6 {
+    background: transparent !important;
+} /* Reworked footer [7/9] */
+
+.footer-1fjuF6 .quickMessage-2XpSaN {
+    background: transparent !important;
+    border: 1px solid #ffe066;
+    border-radius: 12px;
+    margin: 3px 0 2px 0;
+} /* Adjust quick message box [8/9] */
+
+.footer-1fjuF6 .protip-YaFfgO {
     display: none;
-} /* Remove footer [6/6] */
+} /* Remove tip [9/9] */
+
+
 
 
 .role-2irmRk {
